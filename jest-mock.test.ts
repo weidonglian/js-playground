@@ -1,5 +1,6 @@
 import * as math from './math'
 import * as mathApp from './math-app'
+import { multiply } from './math'
 
 test("add 1+2", () => {
     expect(1+2).toBe(3)
@@ -30,4 +31,9 @@ test("mock math with spy on", () => {
     expect(mathApp.doAdd(1, 2)).toBe(0)
     addMock.mockRestore()
     expect(mathApp.doAdd(1, 2)).toBe(3)
+})
+
+test("mock multiply", () => {
+    //const multiplyMock = jest.spyOn(multiply)
+    expect(mathApp.doMultiply(4, 3)).toBe(12)
 })
