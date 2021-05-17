@@ -17,4 +17,4 @@ var counter = 0;
 setInterval(async()=>{
     counter++;
     await request_tyson("Calling " + counter + " times");
-}, 400);
+}, 10);
